@@ -123,7 +123,7 @@ public class userscontroller {
 	{
 		List<Trainer> list=trdao.getUserbyname(trainer.getName());
 		model.addAttribute("list",list);
-		return "trainerall";
+		return "usrtrainerall";
 	}
 	@RequestMapping("user/useroffice")
 	public String oficedash()

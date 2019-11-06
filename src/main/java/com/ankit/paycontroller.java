@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ankit.dao.Offline_paydao;
 import com.ankit.dao.Online_paydao;
 import com.ankit.dao.Paymentdao;
+import com.ankit.model.Trainer;
 import com.ankit.model.User;
 import com.ankit.model.offline_pay;
 import com.ankit.model.online_pay;
@@ -98,37 +99,15 @@ public class paycontroller {
 	@RequestMapping(value = "admin/offpayshow", method = RequestMethod.POST)
 	public String offpayShow(@ModelAttribute("offline_pay") offline_pay offline_pay,Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		List<offline_pay> list=new ArrayList<offline_pay>();  
-		conn.close();
-		offline_pay offline_pay1=offdao.getUser(offline_pay.getUsername());
-		list.add(offline_pay1);
-		model.addAttribute("list", list);
-		
-		//model.addAttribute("id", employee.getId());
+		List<offline_pay> list=offdao.getUser(offline_pay.getUsername());
+		model.addAttribute("list",list);
 		return "offpayall";
 	}
 	@RequestMapping(value = "admin/onpayshow", method = RequestMethod.POST)
-	public String onpayShow(@ModelAttribute("online_pay") online_pay online_pay,Model model) throws SQLException
+	public String onpaySow(@ModelAttribute("online_pay") online_pay online_pay,Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		List<online_pay> list=new ArrayList<online_pay>();  
-		conn.close();
-		online_pay online_pay1=ondao.getUser(online_pay.getUsername());
-		list.add(online_pay1);
-		model.addAttribute("list", list);
-		
-		//model.addAttribute("id", employee.getId());
+		List<online_pay> list=ondao.getUser(online_pay.getUsername());
+		model.addAttribute("list",list);
 		return "onpayall";
 	}
 	@RequestMapping("admin/newoffpay")
@@ -178,19 +157,9 @@ public class paycontroller {
 	@RequestMapping(value = "user/usroffpayshow", method = RequestMethod.POST)
 	public String usroffpayShow(@ModelAttribute("offline_pay") offline_pay offline_pay,Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		List<offline_pay> list=new ArrayList<offline_pay>();  
-		conn.close();
-		offline_pay offline_pay1=offdao.getUser(offline_pay.getUsername());
-		list.add(offline_pay1);
-		model.addAttribute("list", list);
 		
-		//model.addAttribute("id", employee.getId());
+		List<offline_pay> list=offdao.getUser(offline_pay.getUsername());
+		model.addAttribute("list",list);
 		return "usroffpayall";
 	}
 	@RequestMapping("user/usronpay")
@@ -209,19 +178,8 @@ public class paycontroller {
 	@RequestMapping(value = "user/usronpayshow", method = RequestMethod.POST)
 	public String usronpayShow(@ModelAttribute("online_pay") online_pay online_pay,Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		List<online_pay> list=new ArrayList<online_pay>();  
-		conn.close();
-		online_pay online_pay1=ondao.getUser(online_pay.getUsername());
-		list.add(online_pay1);
-		model.addAttribute("list", list);
-		
-		//model.addAttribute("id", employee.getId());
+		List<online_pay> list=ondao.getUser(online_pay.getUsername());
+		model.addAttribute("list",list);
 		return "usronpayall";
 	}
 }

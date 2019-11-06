@@ -30,25 +30,6 @@ public class Slotdashdaoimpl implements slotdashdao {
 	public Slotdashdaoimpl(DataSource datasource) {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
 	}
-
-	/*
-	 * public List<Slotdash> loadAll() {
-	 * 
-	 * String sql = "SELECT * FROM slotdash"; return jdbcTemplate.query(sql,new
-	 * ResultSetExtractor<List<Slotdash> >() {
-	 * 
-	 * public List<Slotdash> extractData(ResultSet rs) throws
-	 * SQLException,DataAccessException{
-	 * 
-	 * List<Slotdash> ls=new ArrayList<Slotdash>(); while(rs.next()) { Slotdash
-	 * slotdash = new Slotdash(); slotdash.setSlot_no(rs.getInt("slot_no"));
-	 * slotdash.setNo_of_stud(rs.getInt("no_of_stud"));
-	 * slotdash.getStart_time(rs.getString("start_time"));
-	 * slotdash.getEnd_time(rs.getString("end_time")); ls.add(slotdash); } return
-	 * ls; }
-	 * 
-	 * }); }
-	 */
 	public List<Slotdash> loadAll() {
 		List<Slotdash> list;
 		String sql="select * from slotdash";

@@ -14,6 +14,7 @@ import org.springframework.jdbc.core.ResultSetExtractor;
 
 import com.ankit.model.User;
 import com.ankit.model.offline_pay;
+import com.ankit.model.online_pay;
 
 public class Offline_payimpl implements Offline_paydao {
 
@@ -40,21 +41,11 @@ public class Offline_payimpl implements Offline_paydao {
 		jdbcTemplate.update(sql,username);
 		return null;
 	}
-	public offline_pay getUser(String username) {
+	public List<offline_pay> getUser(String username) {
+		List<offline_pay> list;
 		String sql = "SELECT * FROM offline_pay WHERE username='"+username+"'";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<offline_pay>() {
-		
-		public offline_pay extractData(ResultSet rs) throws SQLException,DataAccessException{
-			if(rs.next()) {
-				offline_pay offline_pay = new offline_pay();
-				offline_pay.setUsername(rs.getString("username"));
-				offline_pay.setAmount(rs.getInt("amount"));
-				return offline_pay;
-			}
-			return null;
-		}
-		
-	});
+		list=(List<offline_pay>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<offline_pay>(offline_pay.class));
+		return list;
 }
 	public List<offline_pay> loadAll() {
 		List<offline_pay> list;

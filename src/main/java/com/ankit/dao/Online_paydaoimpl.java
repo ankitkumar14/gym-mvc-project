@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
+import com.ankit.model.Trainer;
 import com.ankit.model.offline_pay;
 import com.ankit.model.online_pay;
 
@@ -32,7 +33,7 @@ public class Online_paydaoimpl implements Online_paydao {
 		String sql="INSERT INTO payment VALUES(?,?)";
 		jdbcTemplate.update(sql,new Object[] {onpay.getPayment_id(),onpay.getUsername()});
 		sql="INSERT INTO online_pay VALUES(?,?,?,?,?,?,?)";
-		jdbcTemplate.update(sql,new Object[] {onpay.getUsername(),onpay.getVia(),onpay.getAmount(),onpay.getD_ate(),onpay.getStart_month(),onpay.getEnd_month(),onpay.getPayment_id()});
+		jdbcTemplate.update(sql,new Object[] {onpay.getUsername(),onpay.getAmount(),onpay.getD_ate(),onpay.getVia(),onpay.getStart_month(),onpay.getEnd_month(),onpay.getPayment_id()});
 		return null;
 	}
 	public Void delete(String username) {
@@ -40,22 +41,13 @@ public class Online_paydaoimpl implements Online_paydao {
 		jdbcTemplate.update(sql,username);
 		return null;
 	}
-	public online_pay getUser(String username) {
+	public List<online_pay> getUser(String username) {
+		
+		List<online_pay> list;
 		String sql = "SELECT * FROM online_pay WHERE username='"+username+"'";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<online_pay>() {
-		
-		public online_pay extractData(ResultSet rs) throws SQLException,DataAccessException{
-			if(rs.next()) {
-				online_pay online_pay = new online_pay();
-				online_pay.setUsername(rs.getString("username"));
-				online_pay.setAmount(rs.getInt("amount"));
-				return online_pay;
-			}
-			return null;
-		}
-		
-	});
-}
+		list=(List<online_pay>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<online_pay>(online_pay.class));
+		return list;
+	}
 	public List<online_pay> loadAll() {
 		List<online_pay> list;
 		String sql="select * from online_pay";

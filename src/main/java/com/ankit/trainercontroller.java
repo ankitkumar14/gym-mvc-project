@@ -49,6 +49,11 @@ public class trainercontroller {
 		//conn.close();
 		return "success";
 	}
+	@RequestMapping("admin/usrdeletetrainer{username}")
+	public String usrtraineredel(@PathVariable(value="username") String username) throws  SQLException
+	{
+		return "notacces";
+	}
 	@RequestMapping("admin/trainersearch")
 	public String searchtrainer(Model model) throws SQLException
 	{

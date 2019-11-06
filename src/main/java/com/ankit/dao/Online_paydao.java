@@ -12,5 +12,5 @@ public interface Online_paydao {
 	public Void saveOrUpdate(online_pay onpay);
 	public List<online_pay> loadAll();
 	public Void delete(String username);
-	public online_pay getUser(String username);
+	public List<online_pay> getUser(String username);
 }

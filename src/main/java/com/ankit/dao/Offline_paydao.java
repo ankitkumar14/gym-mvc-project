@@ -12,5 +12,5 @@ public interface Offline_paydao {
 	public Void saveOrUpdate(offline_pay user);
 	public List<offline_pay> loadAll();
 	public Void delete(String username);
-	public offline_pay getUser(String username);
+	public List<offline_pay> getUser(String username);
 }

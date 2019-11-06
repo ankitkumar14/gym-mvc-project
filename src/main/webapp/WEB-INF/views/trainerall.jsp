@@ -25,7 +25,6 @@
                     <c:forEach items="${list}" var="trainer" >
                         <tr>
                             <td>${trainer.username}  </td>
-                 
                             <td>${trainer.name}</td>
                             <td>${trainer.address}</td>
                             <td>${trainer.email_id}</td>

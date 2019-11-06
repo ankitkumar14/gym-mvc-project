@@ -59,7 +59,7 @@ public class kitcontroller {
 	public String itmShow(@ModelAttribute("items") Items items,Model model) throws SQLException
 	{
 		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
+		try {conn= DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE","1H8x5l0hIE","zt9MF9W73V");
 		} catch(SQLException e)
 		{
 			e.printStackTrace();
@@ -110,7 +110,7 @@ public class kitcontroller {
 	public String usritmShow(@ModelAttribute("items") Items items,Model model) throws SQLException
 	{
 		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/db","ab","abc@abc123");
+		try {conn= DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE","1H8x5l0hIE","zt9MF9W73V");
 		} catch(SQLException e)
 		{
 			e.printStackTrace();

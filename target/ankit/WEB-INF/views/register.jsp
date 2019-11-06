@@ -34,7 +34,7 @@
 			<br>
 			<div class="form-group">
 
-				<label for="">Confirm password</label>
+				<label for="">CONFORM PASSWORD</label>
 				<br>
 				<form:input path="mpassword" type="password" class="form-control" value="aaa" />
 				<!-- bind to user.name-->

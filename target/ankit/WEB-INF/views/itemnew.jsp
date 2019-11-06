@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="items" action="additem" class="form-inline">
 	<div class="form-group">
-            <label for="">kid</label>
+            <label for="">EQUIPMENT ID</label>
             <br>
             <form:input type="integer" class="form-control" path="kid" placeholder="kid" value="aaa" />
             <form:errors path="kid" />
@@ -24,7 +24,7 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">name</label>
+			<label for="">NAME</label>
 			<br>
 				<form:input path="name" type="text" class="form-control" placeholder="name" value="aaa"/>
 				<!-- bind to user.name-->
@@ -34,9 +34,9 @@
 			<br>
 			<div class="form-group">
 
-				<label for="">Weight</label>
+				<label for="">WEIGHT</label>
 				<br>
-				<form:input path="size" type="integer" class="form-control" placeholder="size" value="aaa" />
+				<form:input path="size" type="integer" class="form-control" placeholder="size" value="00" />
 				<!-- bind to user.name-->
 				<form:errors path="size" />
 			</div>

@@ -12,13 +12,13 @@
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>Username</th>
+                        <th>USERNAME</th>
                 
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Email_id</th>
-                        <th>Contacts</th>
-                        <th>slot no</th>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>EMAIL ID</th>
+                        <th>PHONE</th>
+                        <th>SLOT NO</th>
                         <th>Delete it</th>
        
                     </tr>

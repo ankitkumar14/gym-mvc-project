@@ -12,13 +12,13 @@
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>Username</th>
-                        <th>amount</th>
-                        <th>date</th>
-                        <th>using</th>
-                        <th>from</th>
-                        <th>to</th>
-                        <th>payment_id</th>
+                        <th>USERNAME</th>
+                        <th>AMOUNT</th>
+                        <th>PAYMENT DATE</th>
+                        <th>PAYMENT USING</th>
+                        <th>PAYMENT FROM</th>
+                        <th>PAYMENT TO</th>
+                        <th>PAYMENT ID</th>
                         <th>Delete it</th>
        
                     </tr>

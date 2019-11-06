@@ -16,15 +16,15 @@
 <div class="container">
 	<form:form method="post" modelAttribute="office" action="addoffice" class="form-inline">
 	<div class="form-group">
-            <label for="">no</label>
+            <label for="">NUMBER</label>
             <br>
-            <form:input type="integer" class="form-control" path="no" placeholder="no" value="aaa" />
+            <form:input type="integer" class="form-control" path="no" placeholder="no" value="000" />
             <form:errors path="no" />
         </div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">location</label>
+			<label for="">LOCATION</label>
 			<br>
 				<form:input path="location" type="text" class="form-control" placeholder="location" value="aaa"/>
 				<!-- bind to user.name-->
@@ -34,9 +34,9 @@
 			<br>
 			
 			<div class="form-group">
-			<label for="">ration</label>
+			<label for="">RATING</label>
 			<br>
-				<form:input path="rating" type="integer" class="form-control" placeholder="rating" value="000"/>
+				<form:input path="rating" type="integer" class="form-control" placeholder="rating" value="0/10"/>
 				<!-- bind to user.name-->
 				<form:errors path="rating" />
 			</div>

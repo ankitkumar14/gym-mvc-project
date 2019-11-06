@@ -16,10 +16,10 @@
 <div class="container">
 	<form:form method="post" modelAttribute="user" action="usrshow" class="form-inline">
 	<div class="form-group">
-            <label for="">Username</label>
+            <label for="">NAME</label>
             <br>
-            <form:input type="text" class="form-control" path="username" placeholder="username" />
-            <form:errors path="username" />
+            <form:input type="text" class="form-control" path="name" placeholder="name" />
+            <form:errors path="name" />
         </div>
 			<br>
 			<br>

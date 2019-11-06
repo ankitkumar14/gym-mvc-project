@@ -9,17 +9,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body style="background: #ffe6e6">
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #ffcccc !important">
+<body style="background:   #ffcc66">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: #9966ff !important">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">RANJAN DECORATORS</a>
+				<a class="navbar-brand" href="#"><font color="black">FIT & FORMULA</font></a>
 			</div>
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/dbms/user"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-				</ul>
+			
 			<ul class="nav navbar-nav navbar-right">
-			<li><a href="/dbms/buyitem/cart"><span class="glyphicon glyphicon-shopping-cart"></span>CART</a></li>
 			<c:if test="${pageContext.request.userPrincipal.name != null}">
 				<li><a href="<c:url value="/j_spring_security_logout" />"><span class="glyphicon glyphicon-log-out"></span>
 						LOGOUT</a></li>
@@ -38,11 +35,11 @@
     </c:if>
     <br>
     <br>
-    <h2><a href="useralltrainer">view all trainer</a></h2>
-    <h2><a href="useroffice">offices</a></h2>
-    <h2><a href="userslot">MY slot</a></h2>
-    <h2><a href="useritem">all equipment</a></h2>
-    <h2><a href="userpayment">payment history</a></h2>
+    <h2><a href="user/useralltrainer">VIEW ALL TRAINER</a></h2>
+    <h2><a href="user/useroffice">OFFICES</a></h2>
+    <h2><a href="user/userslot">VIEW YOUR SLOT</a></h2>
+    <h2><a href="user/useritem">ALL EQUIPMENT</a></h2>
+    <h2><a href="user/userpayment">PAYMENT HISTORY</a></h2>
     </div>
     <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>

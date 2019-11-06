@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="items" action="itmshow" class="form-inline">
 	<div class="form-group">
-            <label for="">kid</label>
+            <label for="">EQUIPMENT ID</label>
             <br>
             <form:input type="integer" class="form-control" path="kid" placeholder="kid" />
             <form:errors path="kid" />

@@ -12,11 +12,11 @@
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>kit id</th>
+                        <th>EQUIPMENT id</th>
                   
-                        <th>Name</th>
+                        <th>NAME</th>
                         
-                        <th>weight</th>
+                        <th>WEIGHT</th>
                         <th>Delete it</th>
        
                     </tr>

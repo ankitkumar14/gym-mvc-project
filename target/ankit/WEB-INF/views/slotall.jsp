@@ -12,13 +12,13 @@
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>slot no</th>
-                        <th>start time</th>
-                        <th>end time</th>
-                        <th>no of student</th>
+                        <th>SLOT NUMBER</th>
+                        <th>STARTING TIME</th>
+                        <th>ENDING TIME</th>
+                        <th>NO OF STUDENT</th>
        
                     </tr>
-                    <c:forEach var="slotdash" items="${list}">
+                    <c:forEach items="${list}" var="slotdash" >
                         <tr>
                             <td>${slotdash.slot_no}</td>
                             <td>${slotdash.start_time}</td>

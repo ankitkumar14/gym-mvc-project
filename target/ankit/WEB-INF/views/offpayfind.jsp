@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="offline_pay" action="offpayshow" class="form-inline">
 	<div class="form-group">
-            <label for="">Username</label>
+            <label for="">USERNAME</label>
             <br>
             <form:input type="text" class="form-control" path="username" placeholder="username" />
             <form:errors path="username" />

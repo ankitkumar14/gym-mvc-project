@@ -12,8 +12,8 @@
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>Username</th>
-                        <th>slot_no</th>
+                        <th>USERNAME</th>
+                        <th>SLOT NUMBER</th>
                         <th>Delete it</th>
        
                     </tr>

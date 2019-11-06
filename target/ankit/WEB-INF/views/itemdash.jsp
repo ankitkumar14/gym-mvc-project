@@ -8,9 +8,9 @@
 </head>
 <body>
 	
-	<button><a href="allitem">Show All equipment</a></button>
-    <button><a href="itemsearch">Search equipment</a></button>
-    <button><a href="newitem">Add New equipment</a></button>
+	<button><a href="allitem">SHOW ALL EQUIPMENT</a></button>
+    <button><a href="itemsearch">SEARCH EQUIPMENT</a></button>
+    <button><a href="newitem">ADD NEW EQUIPMENT</a></button>
     
 </body>
 </html>

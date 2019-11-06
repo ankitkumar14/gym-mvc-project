@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="trainer" action="addtrainer" class="form-inline">
 	<div class="form-group">
-            <label for="">username</label>
+            <label for="">USERNAME</label>
             <br>
             <form:input type="text" class="form-control" path="username" placeholder="username" value="aaa" />
             <form:errors path="username" />
@@ -24,11 +24,20 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">name</label>
+			<label for="">NAME</label>
 			<br>
 				<form:input path="name" type="text" class="form-control" placeholder="name" value="aaa"/>
 				<!-- bind to user.name-->
 				<form:errors path="name" />
+			</div>
+			<br>
+			<br>
+			<div class="form-group">
+			<label for="">ADDRESS</label>
+			<br>
+				<form:input path="address" type="text" class="form-control" placeholder="address" value="aaa"/>
+				<!-- bind to user.name-->
+				<form:errors path="address" />
 			</div>
 			<br>
 			<br>
@@ -50,32 +59,33 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">achievement</label>
-			<br>
-				<form:input path="achievement" type="text" class="form-control" placeholder="achievement" value="111"/>
-				<!-- bind to user.name-->
-				<form:errors path="achievement" />
-			</div>
-			<br>
-			<br>
-			<div class="form-group">
 			<label for="">AGE</label>
 			<br>
-				<form:input path="age" type="integer" class="form-control" placeholder="age" value="000"/>
+				<form:input path="age" type="integer" class="form-control" placeholder="age" value="0"/>
 				<!-- bind to user.name-->
 				<form:errors path="age" />
 			</div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">studiess</label>
+			<label for="">ACHIEVEMENT</label>
+			<br>
+				<form:input path="achievement" type="text" class="form-control" placeholder="achievement" value="aaa"/>
+				<!-- bind to user.name-->
+				<form:errors path="achievement" />
+			</div>
+			<br>
+			<br>
+
+			<div class="form-group">
+			<label for="">STUDIES</label>
 			<br>
 				<input name="studies" type="text" class="form-control" placeholder="studies"/>
 			</div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">slot no</label>
+			<label for="">SLOT NO</label>
 			<br>
 				<form:input path="slot_no" type="integer" class="form-control" placeholder="slot_no" value="000"/>
 				<!-- bind to user.name-->

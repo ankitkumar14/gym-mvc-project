@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="slot" action="addslot" class="form-inline">
 	<div class="form-group">
-            <label for="">username</label>
+            <label for="">USERNAME</label>
             <br>
             <form:input type="text" class="form-control" path="username" placeholder="username" value="aaa" />
             <form:errors path="username" />

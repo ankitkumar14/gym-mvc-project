@@ -18,13 +18,13 @@
 }
 </style>
 </head>
-<body onload='document.loginForm.j_username.focus()' style="background: #ADD8E6">
+<body onload='document.loginForm.j_username.focus()' style="background: #ff4d4d">
 	<div>
 		<center>
 			<div class="container">
-				<div style="background: #ffcccc !important" class="jumbotron">
-					<h2 style="font-size: 50px;font-family: Western">NANDAN GROUP OF HOTELS</h2>
-					<p>THE EVENT PLANNER</p>
+				<div style="background: #ADD8E6 !important" class="jumbotron">
+					<h2 style="font-size: 50px;font-family: Western">MUSCLES AND FITNESS GYM</h2>
+					<p>Fit & Formula</p>
 				</div>
 				<h3 style="font-size: 25px">Login</h3>
 

@@ -8,9 +8,9 @@
 </head>
 <body>
 	
-	<button><a href="alluser">Show All Users</a></button>
-    <button><a href="usrsearch">Search Users</a></button>
-    <button><a href="newusr">Add New Users</a></button>
+	<button><a href="alluser">SHOW ALL USERS</a></button>
+    <button><a href="usrsearch">SEARCH USER</a></button>
+    <button><a href="newusr">ADD NEW USER</a></button>
     
 </body>
 </html>

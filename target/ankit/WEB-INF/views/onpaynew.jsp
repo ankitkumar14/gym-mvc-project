@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="online_pay" action="addon" class="form-inline">
 	<div class="form-group">
-            <label for="">username</label>
+            <label for="">USERNAME</label>
             <br>
             <form:input type="text" class="form-control" path="username" placeholder="username" value="aaa" />
             <form:errors path="username" />
@@ -24,7 +24,7 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">amount</label>
+			<label for="">AMOUNT</label>
 			<br>
 				<form:input path="amount" type="integer" class="form-control" placeholder="amount" value="0"/>
 				<!-- bind to user.name-->
@@ -33,16 +33,16 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">date</label>
+			<label for="">PAYMENT DATE</label>
 			<br>
-				<form:input path="d_ate" type="text" class="form-control" placeholder="d_ate" value="aaa"/>
+				<form:input path="d_ate" type="text" class="form-control" placeholder="d_ate" value="00-00-00"/>
 				<!-- bind to user.name-->
 				<form:errors path="d_ate" />
 			</div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">using</label>
+			<label for="">PAYMENT USING</label>
 			<br>
 				<form:input path="via" type="text" class="form-control" placeholder="via" value="aaa"/>
 				<!-- bind to user.name-->
@@ -52,27 +52,27 @@
 			<br>
 			<div class="form-group">
 
-				<label for="">from</label>
+				<label for="">PAYMENT FROM</label>
 				<br>
-				<form:input path="start_month" type="text" class="form-control" placeholder="start_month" value="aaa" />
+				<form:input path="start_month" type="text" class="form-control" placeholder="start_month" value="00-00-00" />
 				<!-- bind to user.name-->
 				<form:errors path="start_month" />
 			</div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">to</label>
+			<label for="">PAYMENT TO</label>
 			<br>
-				<form:input path="end_month" type="text" class="form-control" placeholder="end_month" value="111"/>
+				<form:input path="end_month" type="text" class="form-control" placeholder="end_month" value="00-00-00"/>
 				<!-- bind to user.name-->
 				<form:errors path="end_month" />
 			</div>
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">payment</label>
+			<label for="">PAYMENT ID</label>
 			<br>
-				<form:input path="payment_id" type="text" class="form-control" placeholder="payment_id" value="000"/>
+				<form:input path="payment_id" type="text" class="form-control" placeholder="payment_id" value="aaa"/>
 				<!-- bind to user.name-->
 				<form:errors path="payment_id" />
 			</div>

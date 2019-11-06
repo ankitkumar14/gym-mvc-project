@@ -16,7 +16,7 @@
 <div class="container">
 	<form:form method="post" modelAttribute="user" action="adduser" class="form-inline">
 	<div class="form-group">
-            <label for="">username</label>
+            <label for="">USERNAME</label>
             <br>
             <form:input type="text" class="form-control" path="username" placeholder="username" value="aaa" />
             <form:errors path="username" />
@@ -24,7 +24,7 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">password</label>
+			<label for="">PASSWORD</label>
 			<br>
 				<form:input path="password" type="text" class="form-control" placeholder="password" value="aaa"/>
 				<!-- bind to user.name-->
@@ -33,7 +33,7 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">name</label>
+			<label for="">NAME</label>
 			<br>
 				<form:input path="name" type="text" class="form-control" placeholder="name" value="aaa"/>
 				<!-- bind to user.name-->
@@ -70,7 +70,7 @@
 			<br>
 			<br>
 			<div class="form-group">
-			<label for="">address</label>
+			<label for="">ADDRESS</label>
 			<br>
 				<input name="address" type="text" class="form-control" placeholder="address"/>
 			</div>

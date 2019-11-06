@@ -7,14 +7,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>USERS</title>
+<title>office</title>
 </head>
 <body>
 	<table border="1px solid black">
                     <tr>
-                        <th>No</th>
-                        <th>LOcation</th>
-                        <th>rating</th>
+                        <th>NUMBER</th>
+                        <th>LOCATION</th>
+                        <th>PUBLIC RATING OUT OF 10</th>
                         <th>Delete it</th>
        
                     </tr>
@@ -22,7 +22,7 @@
                         <tr>
                             <td>${office.no}  </td>
                             <td>${office.location}</td>
-                            <td>${User.rating}</td>
+                            <td>${office.rating}</td>
                        
                         	<td><button><a href="deleteoffice${office.no}">Delete this office</a></button></td>
                         </tr>

@@ -8,9 +8,9 @@
 </head>
 <body>
 	
-	<button><a href="alloffpay">Show All Uoopay</a></button>
-    <button><a href="offpaysearch">Search Users</a></button>
-    <button><a href="newoffpay">Add New Users</a></button>
+	<button><a href="alloffpay">SHOW ALL OFFLINE PAYMENT</a></button>
+    <button><a href="offpaysearch">SEARCH PAYMENT HISTORY</a></button>
+    <button><a href="newoffpay">ADD NEW PAYMENT</a></button>
     
 </body>
 </html>

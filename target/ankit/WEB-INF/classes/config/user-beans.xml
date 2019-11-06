@@ -13,4 +13,5 @@
     <bean id="Itemsdao" class="com.ankit.dao.ItemsdaoImpl"></bean>
      <bean id="Offline_paydao" class="com.ankit.dao.Offline_payimpl"></bean>
      <bean id="Online_paydao" class="com.ankit.dao.Online_paydaoimpl"></bean>
+     <bean id="slotdashdao" class="com.ankit.dao.Slotdashdaoimpl"></bean>
 </beans>

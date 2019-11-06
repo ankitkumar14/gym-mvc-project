@@ -8,9 +8,9 @@
 </head>
 <body>
 	
-	<button><a href="allonpay">Show All onpay</a></button>
-    <button><a href="onpaysearch">Search Users</a></button>
-    <button><a href="newonpay">Add New Users</a></button>
+	<button><a href="allonpay">SHOW ALL ONLINE PAYMENT</a></button>
+    <button><a href="onpaysearch">SEARCH PAYMENT HISTORY</a></button>
+    <button><a href="newonpay">ADD NEW PAYMENT</a></button>
     
 </body>
 </html>

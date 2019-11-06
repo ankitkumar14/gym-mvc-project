@@ -6,8 +6,8 @@
 </head>
 <body>
     
-    <button><a href="alltrainer">Show All Trainers</a></button>
-    <button><a href="trainersearch">Search Trainer</a></button>
-    <button><a href="newtrainer">Add New Trainer</a></button>
+    <button><a href="alltrainer">SHOW ALL TRAINERS</a></button>
+    <button><a href="trainersearch">SEARCH TRAINER</a></button>
+    <button><a href="newtrainer">ADD NEW TRAINER</a></button>
 </body>
 </html>

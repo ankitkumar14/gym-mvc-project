@@ -8,9 +8,9 @@
 </head>
 <body>
 	
-	<button><a href="allslot">Show All slot</a></button>
-    <button><a href="slotsearch">Search slot by Users</a></button>
-    <button><a href="newslot">Add New Users to slot</a></button>
+	<button><a href="allslot">SHOW ALL SLOT</a></button>
+    <button><a href="slotsearch">SEARCH SLOT BY USER</a></button>
+    <button><a href="newslot">ADD NEW USER TO SLOT</a></button>
     
 </body>
 </html>

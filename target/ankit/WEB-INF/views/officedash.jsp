@@ -8,8 +8,8 @@
 </head>
 <body>
 	
-	<button><a href="aloffice">Show All office</a></button>
-    <button><a href="newoffice">Add New office</a></button>
+	<button><a href="aloffice">SHOW ALL OFFICE</a></button>
+    <button><a href="newoffice">ADD NEW OFFICE</a></button>
     
 </body>
 </html>

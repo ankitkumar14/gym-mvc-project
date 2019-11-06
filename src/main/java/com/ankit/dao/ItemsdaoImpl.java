@@ -27,21 +27,11 @@ public class ItemsdaoImpl implements Itemsdao {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	public Items getItems(Integer kid) {
-		String sql = "SELECT * FROM kit WHERE kid='"+kid+"'";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<Items>() {
-		
-		public Items extractData(ResultSet rs) throws SQLException,DataAccessException{
-			if(rs.next()) {
-				Items items = new Items();
-				items.setKid(rs.getInt("kid"));
-				items.setSize(rs.getInt("size"));
-				return items;
-			}
-			return null;
-		}
-		
-	});
+	public List<Items> getItems(Integer kid) {
+		List<Items> list;
+		String sql="select * from kit WHERE kid='"+kid+"'";
+		list=(List<Items>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<Items>(Items.class));
+		return list;
 }
 	public void addItems(Items items) {
 		String sql="insert into kit set name=?,kid=?,size=?";

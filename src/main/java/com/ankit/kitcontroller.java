@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.ankit.dao.Itemsdao;
 import com.ankit.dao.Userdao;
 import com.ankit.model.Items;
+import com.ankit.model.Trainer;
 import com.ankit.model.User;
 
 @Controller
@@ -58,19 +59,8 @@ public class kitcontroller {
 	@RequestMapping(value = "admin/itmshow", method = RequestMethod.POST)
 	public String itmShow(@ModelAttribute("items") Items items,Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE","1H8x5l0hIE","zt9MF9W73V");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
-		List<Items> list=new ArrayList<Items>();  
-		conn.close();
-		Items items1=itmdao.getItems(items.getKid());
-		list.add(items1);
-		model.addAttribute("list", list);
-		
-		//model.addAttribute("id", employee.getId());
+		List<Items> list=itmdao.getItems(items.getKid());
+		model.addAttribute("list",list);
 		return "itemall";
 	}
 	@RequestMapping("admin/newitem")
@@ -120,8 +110,6 @@ public class kitcontroller {
 		Items items1=itmdao.getItemsname(items.getName());
 		list.add(items1);
 		model.addAttribute("list", list);
-		
-		//model.addAttribute("id", employee.getId());
 		return "usritemall";
 	}
 }

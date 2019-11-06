@@ -11,7 +11,7 @@ public interface Userdao{
 	@Autowired
 	public Void saveOrUpdate(User user);
 	public Void delete(String username);
-	public User getUser(String username);
+	public List<User> getUser(String username);
 	public List<User> loadAll();
 	public List<User> getUserbyname(String name);
 }

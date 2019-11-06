@@ -42,21 +42,12 @@ public class UserdaoImpl implements Userdao {
 		return null;
 	}
 
-	public User getUser(String username) {
-		String sql = "SELECT * FROM users WHERE username='"+username+"'";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<User>() {
+	public List<User> getUser(String username) {
 		
-		public User extractData(ResultSet rs) throws SQLException,DataAccessException{
-			if(rs.next()) {
-				User user = new User();
-				user.setUsername(rs.getString("username"));
-				user.setPassword(rs.getString("password"));
-				return user;
-			}
-			return null;
-		}
-		
-	});
+		List<User> list;
+		String sql="select * from users WHERE username='"+username+"'";
+		list=(List<User>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<User>(User.class));
+		return list;
 	}
 
 	public List<User> loadAll() {

@@ -33,14 +33,14 @@ public class officecontroller {
 	@RequestMapping("admin/aloffice")
 	public String alloffice(Model model) throws SQLException
 	{
-		Connection conn =null;
-		try {conn= DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE","1H8x5l0hIE","zt9MF9W73V");
-		} catch(SQLException e)
-		{
-			e.printStackTrace();
-		}
+		/*
+		 * Connection conn =null; try {conn=
+		 * DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE",
+		 * "1H8x5l0hIE","zt9MF9W73V"); } catch(SQLException e) { e.printStackTrace(); }
+		 * List<office> list=ofcdao.loadAll(); conn.close();
+		 * model.addAttribute("list",list); return "officeall";
+		 */
 		List<office> list=ofcdao.loadAll();
-		conn.close();
 		model.addAttribute("list",list);
 		return "officeall";
 	}
@@ -49,7 +49,6 @@ public class officecontroller {
 	{
 		
 		ofcdao.delete(no);
-		//conn.close();
 		return "success";
 	}
 	@RequestMapping("admin/newoffice")

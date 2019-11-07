@@ -9,6 +9,6 @@ public interface Itemsdao {
 	public List<Items> admingetitems(Integer kid);
 	public void deleteItems(Integer kid);
 	public List<Items> loadAll();
-	public Items getItemsname(String name);
+	public List<Items> getItemsname(String name);
 	
 }

@@ -32,7 +32,7 @@ public class ItemsdaoImpl implements Itemsdao {
 		String sql="select * from kit WHERE kid='"+kid+"'";
 		list=(List<Items>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<Items>(Items.class));
 		return list;
-}
+	}
 	public void addItems(Items items) {
 		String sql="insert into kit set name=?,kid=?,size=?";
 		Object object[]= {items.getName(),items.getKid(),items.getSize()};
@@ -54,20 +54,10 @@ public class ItemsdaoImpl implements Itemsdao {
 		list=(List<Items>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<Items>(Items.class));
 		return list;
 	}
-	public Items getItemsname(String name) {
+	public List<Items> getItemsname(String name) {
+		List<Items> list;
 		String sql = "SELECT * FROM kit WHERE name='"+name+"'";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<Items>() {
-		
-		public Items extractData(ResultSet rs) throws SQLException,DataAccessException{
-			if(rs.next()) {
-				Items items = new Items();
-				items.setKid(rs.getInt("kid"));
-				items.setSize(rs.getInt("size"));
-				return items;
-			}
-			return null;
-		}
-		
-	});
-}
+		list=(List<Items>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<Items>(Items.class));
+		return list;
+	}
 }

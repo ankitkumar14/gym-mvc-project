@@ -41,6 +41,5 @@ com/ankit/dao/Userdao.class
 com/ankit/dao/Slotdaoimpl$2.class
 com/ankit/dao/slotdashdao.class
 com/ankit/dao/Paymentdaoimpl.class
-com/ankit/dao/ItemsdaoImpl$1.class
 com/ankit/dao/UserdaoImpl.class
 com/ankit/dao/Salarydao.class

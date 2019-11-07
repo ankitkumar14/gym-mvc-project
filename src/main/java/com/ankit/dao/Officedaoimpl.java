@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
@@ -42,23 +43,10 @@ public class Officedaoimpl implements Officedao {
 	}
 
 	public List<office> loadAll() {
-		String sql = "SELECT * FROM office";
-		return jdbcTemplate.query(sql,new ResultSetExtractor<List<office> >() {
-		
-		public List<office> extractData(ResultSet rs) throws SQLException,DataAccessException{
-
-			List<office> ls=new ArrayList<office>();  
-			while(rs.next()) {
-				office office = new office();
-				office.setNo(rs.getInt("no"));
-				office.setLocation(rs.getString("location"));
-				office.setRating(rs.getInt("rating"));
-				ls.add(office);
-			}
-			return ls;
-		}
-		
-	});
-}
+		List<office> list;
+		String sql="select * from office";
+		list=(List<office>) jdbcTemplate.query(sql, new BeanPropertyRowMapper<office>(office.class));
+		return list;
+	}
 
 }

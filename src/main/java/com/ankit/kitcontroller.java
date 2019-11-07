@@ -99,14 +99,6 @@ public class kitcontroller {
 	@RequestMapping(value = "user/usritmshow", method = RequestMethod.POST)
 	public String usritmShow(@ModelAttribute("items") Items items,Model model) throws SQLException
 	{
-		/*
-		 * Connection conn =null; try {conn=
-		 * DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/1H8x5l0hIE",
-		 * "1H8x5l0hIE","zt9MF9W73V"); } catch(SQLException e) { e.printStackTrace(); }
-		 * List<Items> list=new ArrayList<Items>(); conn.close(); Items
-		 * items1=itmdao.getItemsname(items.getName()); list.add(items1);
-		 * model.addAttribute("list", list);
-		 */
 		List<Items> list=itmdao.getItemsname(items.getName());
 		model.addAttribute("list",list);
 		return "usritemall";
